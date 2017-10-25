@@ -1,0 +1,23 @@
+{
+  "name": "@iamdimka/helper",
+  "version": "0.1.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "prepare": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iamdimka/helper.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iamdimka/helper/issues"
+  },
+  "homepage": "https://github.com/iamdimka/helper#readme"
+}
