@@ -1,6 +1,6 @@
 {
   "name": "@iamdimka/helper",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/iamdimka/helper/issues"
   },
-  "homepage": "https://github.com/iamdimka/helper#readme"
+  "homepage": "https://github.com/iamdimka/helper#readme",
+  "devDependencies": {
+    "@types/node": "^8.0.47"
+  }
 }
