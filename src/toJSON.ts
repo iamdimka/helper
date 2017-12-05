@@ -1,4 +1,4 @@
-export function toJSON<T = any>(o: any): T {
+export default function toJSON<T = any>(o: any): T {
   if (!o || typeof o !== "object") {
     return o
   }

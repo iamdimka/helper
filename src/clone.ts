@@ -1,4 +1,4 @@
-export function clone<T = any>(o: T): T {
+export default function clone<T = any>(o: T): T {
   if (!o || typeof o !== "object") {
     return o
   }
