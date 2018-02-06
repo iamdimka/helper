@@ -1,4 +1,4 @@
-export function range(start: number, to?: number, step?: number): number[] {
+export default function range(start: number, to?: number, step?: number): number[] {
   const result: number[] = []
 
   if (arguments.length === 1) {
