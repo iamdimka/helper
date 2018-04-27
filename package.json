@@ -1,6 +1,6 @@
 {
   "name": "@iamdimka/helper",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/iamdimka/helper#readme",
   "devDependencies": {
-    "@types/node": "^9.4.0"
+    "@types/node": "^10.0.0"
   }
 }

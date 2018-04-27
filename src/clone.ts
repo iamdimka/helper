@@ -10,7 +10,7 @@ export default function clone<T = any>(o: T): T {
   const c = {} as T
   for (const key in o) {
     if (o.hasOwnProperty(key)) {
-      c[key] = o[key]
+      c[key] = clone(o[key])
     }
   }
   return c
