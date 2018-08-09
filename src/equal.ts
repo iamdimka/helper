@@ -1,3 +1,5 @@
+const { hasOwnProperty } = Object.prototype
+
 export default function equal(a: any, b: any): boolean {
   const typeofA = typeof a
 
@@ -31,8 +33,8 @@ export default function equal(a: any, b: any): boolean {
   }
 
   for (const key in a) {
-    if (a.hasOwnProperty(key)) {
-      if (!b.hasOwnProperty(key)) {
+    if (hasOwnProperty.call(a, key)) {
+      if (!hasOwnProperty.call(b, key)) {
         return false
       }
 
@@ -43,8 +45,8 @@ export default function equal(a: any, b: any): boolean {
   }
 
   for (const key in b) {
-    if (b.hasOwnProperty(key)) {
-      if (!a.hasOwnProperty(key)) {
+    if (hasOwnProperty.call(b, key)) {
+      if (!hasOwnProperty.call(a, key)) {
         return false
       }
     }

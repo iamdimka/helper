@@ -12,16 +12,14 @@ export default function toJSON<T = any>(o: any): T {
   }
 
   const obj = {} as any
-  
-  for (const key in o) {
-    if (o.hasOwnProperty(key)) {
-      const v = toJSON(o[key])
 
-      if (v !== undefined) {
-        obj[key] = v
-      }
+  Object.keys(o).forEach(key => {
+    const v = toJSON(o[key])
+
+    if (v !== undefined) {
+      obj[key] = v
     }
-  }
+  })
 
   return obj
 }

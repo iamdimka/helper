@@ -1,6 +1,6 @@
 {
   "name": "@iamdimka/helper",
-  "version": "0.6.4",
+  "version": "0.6.5",
   "description": "",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
@@ -8,7 +8,7 @@
     "lib": "lib"
   },
   "scripts": {
-    "prepare": "tsc"
+    "prepare": "rm ./lib/* && tsc"
   },
   "repository": {
     "type": "git",
@@ -21,6 +21,6 @@
   },
   "homepage": "https://github.com/iamdimka/helper#readme",
   "devDependencies": {
-    "@types/node": "^10.0.0"
+    "@types/node": "^10.5.7"
   }
 }
