@@ -1,45 +1,51 @@
-const { hasOwnProperty } = Object.prototype
+const { hasOwnProperty } = Object.prototype;
 
-export default function equal(a: any, b: any): boolean {
-  const typeofA = typeof a
+export default function equal(a: any, b: any, depth = Infinity): boolean {
+  const typeofA = typeof a;
 
   if (typeof b !== typeofA) {
-    return false
+    return false;
   }
 
   if (typeofA !== "object" || a === null || b === null) {
-    return a === b
+    return a === b;
   }
 
-  const isArray = a instanceof Array
+  const isArray = Array.isArray(a);
 
-  if ((b instanceof Array) !== isArray) {
-    return false
+  if (depth <= 0) {
+    return true;
+  }
+
+  depth -= 1;
+
+  if (Array.isArray(b) !== isArray) {
+    return false;
   }
 
   if (isArray) {
-    const l = a.length
+    const l = a.length;
     if (l !== b.length) {
-      return false
+      return false;
     }
 
     for (let i = 0; i < l; i++) {
-      if (!equal(a[i], b[i])) {
-        return false
+      if (!equal(a[i], b[i], depth)) {
+        return false;
       }
     }
 
-    return true
+    return true;
   }
 
   for (const key in a) {
     if (hasOwnProperty.call(a, key)) {
       if (!hasOwnProperty.call(b, key)) {
-        return false
+        return false;
       }
 
-      if (!equal(a[key], b[key])) {
-        return false
+      if (!equal(a[key], b[key], depth)) {
+        return false;
       }
     }
   }
@@ -47,10 +53,10 @@ export default function equal(a: any, b: any): boolean {
   for (const key in b) {
     if (hasOwnProperty.call(b, key)) {
       if (!hasOwnProperty.call(a, key)) {
-        return false
+        return false;
       }
     }
   }
 
-  return true
+  return true;
 }
