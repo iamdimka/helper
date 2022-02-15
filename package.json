@@ -1,14 +1,11 @@
 {
   "name": "@iamdimka/helper",
-  "version": "1.1.0",
+  "version": "2.7.0",
   "description": "",
-  "main": "./lib/index.js",
-  "types": "./lib/index.d.ts",
-  "directories": {
-    "lib": "lib"
-  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
   "scripts": {
-    "prepare": "rm ./lib/* && tsc"
+    "prepare": "touch 1.js 1.d.ts 1.map && rm ./*.js ./*.d.ts ./*.map && tsc"
   },
   "repository": {
     "type": "git",
@@ -21,6 +18,7 @@
   },
   "homepage": "https://github.com/iamdimka/helper#readme",
   "devDependencies": {
-    "@types/node": "^14.14.13"
+    "@types/node": "^16.11.6",
+    "ts-node": "^10.5.0"
   }
 }
