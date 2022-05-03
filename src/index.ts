@@ -27,6 +27,7 @@ export { default as range } from "./range";
 export { default as resolver } from "./resolver";
 export { default as sleep } from "./sleep";
 export { default as throttle } from "./throttle";
+export { default as timestamp } from "./timestamp";
 export { default as toJSON } from "./toJSON";
 export { default as unique } from "./unique";
 export { default as waitForSignal } from "./waitForSignal";
