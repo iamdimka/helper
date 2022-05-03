@@ -11,6 +11,7 @@ export { default as Cron, cron } from "./Cron";
 export { default as debounce } from "./debounce";
 export { default as debug } from "./debug";
 export { default as defer, Deferred } from "./defer";
+export { default as definedMutable } from "./definedMutable";
 export { default as each } from "./each";
 export { default as env } from "./env";
 export { default as equal } from "./equal";
